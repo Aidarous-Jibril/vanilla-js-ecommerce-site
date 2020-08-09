@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/*********  Variables  *********/
+:root {
+  --bgColor: #ffffff;
+  --primaryColor: #000000;
+  --secondaryColor: orange;
+  --mainPadding: 15px;
+  --mainTransition: all 0.3s ease 0s;
+}
+/********* End of variables  *********/
+
+/*********  Reset  *********/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*********  End of Reset  *********/
+
+/*********  Body  *********/
+body {
+  background-color: var(--bgColor);
+  font-family: "Lato", sans-serif;
+  margin: 0, auto;
+}
+/*********  End of Body  *********/
+
+/*********  HEADER  *********/
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  min-height: 60px;
+  background: rgb(231, 226, 221);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+a,
+li,
+btn {
+  text-decoration: none;
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+.nav-links li a {
+  font-weight: 400;
+}
+.nav-links li a:hover {
+  color: #009900;
+}
+
+.cart-btn {
+  cursor: pointer;
+  position: relative;
+}
+.cart-items {
+  position: absolute;
+  background-color: pink;
+  right: -10;
+  top: -9px;
+  color: var(--primaryColor);
+  padding: 0 3px;
+  border-radius: 20%;
+}
+/********* END OF HEADER  *********/
+
+/********* SECTION-A  *********/
+.section-a {
+  margin: 2rem;
+}
+
+.section-a .banner {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  /* grid-gap: 1rem; */
+  align-items: center;
+  justify-content: center;
+}
+
+.section-a .banner > div {
+  padding-left: 3rem;
+}
+
+.section-a h1 {
+  font-size: 4rem;
+  color: var(--primaryColor);
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-a p {
+  margin: 1rem 0;
+}
+.section-a-btn {
+  display: inline-block;
+  background: var(--primaryColor);
+  color: var(--bgColor);
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+}
+.section-a-btn:hover {
+  background-color: var(--secondaryColor);
+  color: var(--bgColor);
+}
+/********* END OF SECTIONS-A  *********/
+
+/********* SECTIONS-B  *********/
+.section-b {
+  padding: 0 2rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+}
+.section-b-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-rows: repeat(minmax(500px, auto));
+  grid-gap: 20px;
+  align-items: start;
+}
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.img-container .bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  color: var(--bgColor);
+  background: var(--primaryColor);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+}
+.bag-btn:hover {
+  background-color: var(--secondaryColor);
+  color: var(--bgColor);
+}
+
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text > h3 {
+  color: orange;
+  padding-top: 1rem;
+}
+.text h4 {
+  text-transform: capitalize;
+}
+
+/********* END OF SECTIONS-A  *********/
+
+/********* CART  **********/
+.cart-parent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgb(240, 157, 81, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart-parent h3 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+/* these two classes toggles by dom in order to show and hide cart items/content */
+.showCartParent {
+  visibility: visible;
+}
+.showCart {
+  transform: translateX(0%);
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+
+/********* Cart Item  **********/
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color: var(--primaryColor);
+  cursor: pointer;
+  display: flex;
+}
+/********* End of Cart Item  **********/
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.cart-footer .clear-cart-btn {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  width: 50%;
+  padding: 0.5rem;
+  border: none;
+}
+/********* END OF CART  **********/
+
+/*********  FOOTER   **********/
+.section-footer {
+  background: var(--primaryColor);
+  color: #fff;
+  margin-top: 2rem;
+  padding: 4rem;
+}
+
+.section-footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.section-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-footer h3 {
+  margin-bottom: 0.7rem;
+}
+
+.section-footer a {
+  line-height: 1.9;
+  color: #ccc;
+}
+
+.section-footer a > i {
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+.email-form {
+  width: 100%;
+  display: inline-block;
+  background-color: #555;
+  position: relative;
+  border-radius: 20px;
+  line-height: 0;
+  margin-top: 1rem;
+}
+
+.email-form .form-control {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  color: #ddd;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  padding: 0 3rem 0 1.5rem;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+}
+
+.email-form .submit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primaryColor);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--overlay-color);
+}
+/********* END OF FOOTER  **********/
+
+/********* MEDIA QUERIES  **********/
+@media (max-width: 750px) {
+  header .logo {
+    display: none;
+  }
+  .section-a .banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-a .banner div:first-child {
+    order: 2;
+  }
+
+  .section-a .banner div:nth-child(2) {
+    order: -1;
+  }
+
+  .section-a img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .section-footer {
+    padding: 2rem 0;
+  }
+  .section-footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-footer div:nth-child(2),
+  .section-footer div:nth-child(3) {
+    display: none;
+  }
+  .section-footer div:nth-child(4) {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+}

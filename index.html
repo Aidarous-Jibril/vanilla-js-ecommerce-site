@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The King Bed</title>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="home">
+    <!-- HEADER -->
+    <header>
+      <a href="#home">
+        <img class="logo" src="./images/logo3.svg" alt="logo" />
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Services</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-btn">
+        <span class="cart-icon"><i class="fas fa-cart-plus"></i></span>
+        <span class="cart-items">0</span>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!--  SECTION-A -->
+    <section class="section-a">
+      <div class="banner">
+        <div>
+          <h1>Top Collections</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            iste voluptatum voluptatem nesciunt itaque explicabo, amet officiis
+          </p>
+          <button class="section-a-btn">SHOP NOW!</button>
+        </div>
+        <img
+          src="https://i.ibb.co/37Y74kv/showcase.jpg"
+          alt="headphone"
+          style="align-self: flex-end;"
+        />
+      </div>
+    </section>
+    <!-- END OF SECTION-A -->
+
+    <!-- PRODUCT / SECTION-B -->
+    <section class="section-b">
+      <div class="section-b-title"><h2>Latest Products</h2></div>
+
+      <!-- single product, HERE PRODUCTS TO BE ADDED FROM DOM In main.js -->
+      <main class="grid product-center"></main>
+      <!-- end of single product -->
+    </section>
+    <!-- END OF SECTION-B -->
+
+    <!-- CART -->
+    <div class="cart-parent">
+      <div class="cart">
+        <span class="close-cart">
+          <i class="fas fa-window-close"></i>
+        </span>
+        <h3>Your Cart Items:</h3>
+
+        <!-- cart content-->
+        <div class="cart-content">
+          <!-- cart Item -->
+          <!-- CARD ITEM GOES HERE -->
+          <!-- end cart Item-->
+        </div>
+        <div class="cart-footer">
+          <h3>Total: $ <span class="cart-total">0</span></h3>
+          <button class="clear-cart-btn">CLEAR ITEMS</button>
+        </div>
+        <!-- end of cart content-->
+      </div>
+    </div>
+    <!-- END OF CART -->
+    <!-- FOOTER -->
+
+    <!-- Footer -->
+    <footer class="section-footer py-4 bg-primary">
+      <div class="container">
+        <div>
+          <h3 class="text-2 mb-1">Follow Us</h3>
+          <a href="http://twitter.com">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a href="http://facebook.com">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <a href="http://youtube.com">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+        </div>
+        <div>
+          <h3>Company Info</h3>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Blog Posts</h3>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor.</a></li>
+            <li><a href="#">Lorem ipsum dolor.</a></li>
+            <li><a href="#">Lorem ipsum dolor.</a></li>
+            <li><a href="#">Lorem ipsum dolor.</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Subscribe</h3>
+          <p>
+            Sub to recieve for the latest offers.
+          </p>
+          <form
+            class="mt-1"
+            name="email-form"
+            method="POST"
+            data-netlify="true"
+          >
+            <div class="email-form">
+              <span class="form-control-wrap">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  size="40"
+                  class="form-control"
+                  placeholder="E-mail"
+                />
+              </span>
+              <button type="submit" value="Submit" class="form-control submit">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!--END OF FOOTER -->
+
+    <!-- CONTENTFUL SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <!-- SCRIPTS-->
+    <script src="main.js"></script>
+  </body>
+</html>

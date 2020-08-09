@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "carol headphone",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/headphone1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "queen headphone",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "./images/headphone2.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "smario headphone",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "./images/headphone3.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "premium headphone",
+        "price": 22.99,
+        "image": { "fields": { "file": { "url": "./images/headphone4.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "fride headphone",
+        "price": 88.99,
+        "image": { "fields": { "file": { "url": "./images/headphone5.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "dress headphone",
+        "price": 32.99,
+        "image": { "fields": { "file": { "url": "./images/headphone6.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "veddy headphone",
+        "price": 45.99,
+        "image": { "fields": { "file": { "url": "./images/headphone7.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "quality headphone",
+        "price": 23.99,
+        "image": { "fields": { "file": { "url": "./images/headphone8.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "title": "jokky headphone",
+        "price": 29.99,
+        "image": { "fields": { "file": { "url": "./images/headphone9.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "10" },
+      "fields": {
+        "title": "tansy headphone",
+        "price": 49.99,
+        "image": { "fields": { "file": { "url": "./images/headphone10.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "11" },
+      "fields": {
+        "title": "marsy headphone",
+        "price": 34.99,
+        "image": { "fields": { "file": { "url": "./images/headphone11.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "12" },
+      "fields": {
+        "title": "tooble headphone",
+        "price": 19.99,
+        "image": { "fields": { "file": { "url": "./images/headphone12.jpg" } } }
+      }
+    }
+  ]
+}
