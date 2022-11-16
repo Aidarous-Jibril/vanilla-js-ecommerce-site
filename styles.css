@@ -37,6 +37,7 @@ header {
   padding: 10px 40px;
   min-height: 60px;
   background: rgb(231, 226, 221);
+  z-index: 10;
 }
 
 .logo {
